@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_3" version="4.3">
+	<Header>
+		<Application name="JPMML-SkLearn" version="1.4.0"/>
+		<Timestamp>2018-02-13T07:41:26Z</Timestamp>
+	</Header>
+	<MiningBuildTask>
+		<Extension>PMMLPipeline(steps=[('mapper', DataFrameMapper(default=False, df_out=False,
+        features=[('ship_to', [CategoricalDomain(), &lt;com.highradius.transformers.CustomTransformFunctionGenerator object at 0x000001663602B7F0&gt;])],
+        input_df=False, sparse=False)),
+       ('estimator', RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
+            max_depth=15, max_features='auto', max_leaf_nodes=None,
+            min_impurity_split=1e-07, min_samples_leaf=1,
+            min_samples_split=40, min_weight_fraction_leaf=0.0,
+            n_estimators=50, n_jobs=1, oob_score=False, random_state=9,
+            verbose=0, warm_start=False))])</Extension>
+	</MiningBuildTask>
+	<DataDictionary>
+		<DataField name="labels" optype="categorical" dataType="integer">
+			<Value value="-1"/>
+			<Value value="1"/>
+		</DataField>
+	</DataDictionary>
+	<MiningModel functionName="classification">
+		<MiningSchema>
+			<MiningField name="labels" usageType="target"/>
+		</MiningSchema>
+		<Output>
+			<OutputField name="probability(-1)" optype="continuous" dataType="double" feature="probability" value="-1"/>
+			<OutputField name="probability(1)" optype="continuous" dataType="double" feature="probability" value="1"/>
+		</Output>
+		<Segmentation multipleModelMethod="average">
+			<Segment id="1">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25526.0"/>
+						<ScoreDistribution value="1" recordCount="102402.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="2">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25377.0"/>
+						<ScoreDistribution value="1" recordCount="102551.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="3">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25688.0"/>
+						<ScoreDistribution value="1" recordCount="102240.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="4">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25453.0"/>
+						<ScoreDistribution value="1" recordCount="102475.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="5">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25390.0"/>
+						<ScoreDistribution value="1" recordCount="102538.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="6">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25423.0"/>
+						<ScoreDistribution value="1" recordCount="102505.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="7">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25487.0"/>
+						<ScoreDistribution value="1" recordCount="102441.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="8">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25499.0"/>
+						<ScoreDistribution value="1" recordCount="102429.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="9">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25137.0"/>
+						<ScoreDistribution value="1" recordCount="102791.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="10">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25429.0"/>
+						<ScoreDistribution value="1" recordCount="102499.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="11">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25403.0"/>
+						<ScoreDistribution value="1" recordCount="102525.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="12">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25514.0"/>
+						<ScoreDistribution value="1" recordCount="102414.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="13">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25130.0"/>
+						<ScoreDistribution value="1" recordCount="102798.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="14">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25413.0"/>
+						<ScoreDistribution value="1" recordCount="102515.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="15">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25524.0"/>
+						<ScoreDistribution value="1" recordCount="102404.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="16">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25547.0"/>
+						<ScoreDistribution value="1" recordCount="102381.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="17">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25445.0"/>
+						<ScoreDistribution value="1" recordCount="102483.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="18">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25499.0"/>
+						<ScoreDistribution value="1" recordCount="102429.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="19">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25604.0"/>
+						<ScoreDistribution value="1" recordCount="102324.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="20">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25640.0"/>
+						<ScoreDistribution value="1" recordCount="102288.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="21">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25606.0"/>
+						<ScoreDistribution value="1" recordCount="102322.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="22">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25458.0"/>
+						<ScoreDistribution value="1" recordCount="102470.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="23">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25175.0"/>
+						<ScoreDistribution value="1" recordCount="102753.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="24">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25037.0"/>
+						<ScoreDistribution value="1" recordCount="102891.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="25">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25250.0"/>
+						<ScoreDistribution value="1" recordCount="102678.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="26">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25295.0"/>
+						<ScoreDistribution value="1" recordCount="102633.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="27">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25677.0"/>
+						<ScoreDistribution value="1" recordCount="102251.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="28">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25568.0"/>
+						<ScoreDistribution value="1" recordCount="102360.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="29">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25303.0"/>
+						<ScoreDistribution value="1" recordCount="102625.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="30">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25430.0"/>
+						<ScoreDistribution value="1" recordCount="102498.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="31">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25240.0"/>
+						<ScoreDistribution value="1" recordCount="102688.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="32">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25439.0"/>
+						<ScoreDistribution value="1" recordCount="102489.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="33">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25375.0"/>
+						<ScoreDistribution value="1" recordCount="102553.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="34">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25446.0"/>
+						<ScoreDistribution value="1" recordCount="102482.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="35">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25436.0"/>
+						<ScoreDistribution value="1" recordCount="102492.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="36">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25539.0"/>
+						<ScoreDistribution value="1" recordCount="102389.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="37">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25539.0"/>
+						<ScoreDistribution value="1" recordCount="102389.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="38">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25452.0"/>
+						<ScoreDistribution value="1" recordCount="102476.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="39">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25545.0"/>
+						<ScoreDistribution value="1" recordCount="102383.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="40">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25554.0"/>
+						<ScoreDistribution value="1" recordCount="102374.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="41">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25713.0"/>
+						<ScoreDistribution value="1" recordCount="102215.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="42">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25604.0"/>
+						<ScoreDistribution value="1" recordCount="102324.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="43">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25367.0"/>
+						<ScoreDistribution value="1" recordCount="102561.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="44">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25359.0"/>
+						<ScoreDistribution value="1" recordCount="102569.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="45">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25184.0"/>
+						<ScoreDistribution value="1" recordCount="102744.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="46">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25649.0"/>
+						<ScoreDistribution value="1" recordCount="102279.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="47">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25333.0"/>
+						<ScoreDistribution value="1" recordCount="102595.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="48">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25498.0"/>
+						<ScoreDistribution value="1" recordCount="102430.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="49">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25572.0"/>
+						<ScoreDistribution value="1" recordCount="102356.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="50">
+				<True/>
+				<TreeModel functionName="classification" splitCharacteristic="binarySplit">
+					<MiningSchema/>
+					<Node id="1" score="1" recordCount="127928.0">
+						<True/>
+						<ScoreDistribution value="-1" recordCount="25287.0"/>
+						<ScoreDistribution value="1" recordCount="102641.0"/>
+					</Node>
+				</TreeModel>
+			</Segment>
+		</Segmentation>
+	</MiningModel>
+</PMML>

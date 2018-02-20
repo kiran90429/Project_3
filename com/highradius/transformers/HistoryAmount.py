@@ -22,5 +22,5 @@ def HistoryAmount(X,arguments=None):
     print(amount/mean_amount)
     k = pd.DataFrame(columns=['amount/mean_amount'],data=amount/mean_amount)
     k.to_csv('original_dispute_amount.csv')
-    return np.round(amount/mean_amount,4)
+    return amount/mean_amount
 

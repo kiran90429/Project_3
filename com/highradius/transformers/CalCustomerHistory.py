@@ -37,6 +37,7 @@ def CalCustomerHistory(X,arguments=None):
 
     train_dataframe = pd.DataFrame(X.tolist(),columns=['kunnr','kunwe','xref'])
 
+    train_dataframe['previous_order_index'] = range(0,len(train_dataframe))
     train_dataframe['kunnr'] = train_dataframe['kunnr'].astype(str)
 
     train_dataframe['kunwe'].fillna("others",inplace=True)
@@ -94,8 +95,10 @@ def CalCustomerHistory(X,arguments=None):
     final_train_joined = pd.concat([data_join_1[final_columns], data_join_2[final_columns], data_join_3[final_columns],
                                     data_join_4[final_columns]])
 
+    final_train_joined.sort_values(by='previous_order_index',ascending=True,inplace=True)
+
 
     print(final_train_joined['history'].values)
     final_train_joined.to_csv('cal_customer_history.csv')
 
-    return np.round(final_train_joined['history'].values,4)
+    return final_train_joined['history'].values

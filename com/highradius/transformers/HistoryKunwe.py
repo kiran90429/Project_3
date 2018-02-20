@@ -5,7 +5,7 @@ import pandas as pd
 def HistoryKunwe(X,arguments=None):
     arguments= "{" + arguments + "}"
     history_mapping=ast.literal_eval(arguments)
-    m=pd.Series(X.tolist()).str.split('.',0).str[0]
+    m=pd.Series(X.tolist()).astype('str').str.split('.',0).str[0]
     #m=m.apply(lambda a: history_mapping[a] if a in history_mapping else np.mean(list(history_mapping.values())))
     m = m.apply(lambda a: history_mapping[a] if a in history_mapping else history_mapping['others'])
     # print(m)

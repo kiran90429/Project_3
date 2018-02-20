@@ -34,14 +34,14 @@ def HistoryBvalue(X,arguments=None):
     train_dataframe['b_value'] = train_dataframe['dispute_amount'] / train_dataframe['avg_invalid_dispute_amount']
     train_dataframe.loc[train_dataframe['value_label'] == 'LOW', 'b_value'] = 1 / train_dataframe.loc[train_dataframe['value_label'] == 'LOW', 'b_value']
 
-    train_dataframe.loc[train_dataframe['b_value'] <= 0.01, 'b_value'] = 0.01
-    train_dataframe.loc[train_dataframe['b_value'] >= 100, 'b_value'] = 100
-    train_dataframe.loc[train_dataframe['b_value'] <= 0.01, 'b_value'] = 0.01
-    train_dataframe.loc[train_dataframe['b_value'] >= 100, 'b_value'] = 100
+    train_dataframe.loc[train_dataframe['b_value'] <= 0.005, 'b_value'] = 0.005
+    train_dataframe.loc[train_dataframe['b_value'] >= 5, 'b_value'] = 5
+    train_dataframe.loc[train_dataframe['b_value'] <= 0.005, 'b_value'] = 0.005
+    train_dataframe.loc[train_dataframe['b_value'] >= 5, 'b_value'] = 5
 
 
     print(train_dataframe['b_value'].values)
 
     train_dataframe.to_csv('pmml_b_value.csv')
 
-    return np.round(train_dataframe['b_value'].values,4)
+    return train_dataframe['b_value'].values
